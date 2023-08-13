@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "notion-agent"
+version = "0.0.1"
+description = ""
+authors = ["Had Seddiqi"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "notion_agent" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "*"
+python-dotenv = "*"
+requests = "*"
+openai = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+notion-agent = "notion_agent.cli:cli"
